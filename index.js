@@ -1,17 +1,18 @@
+//index.js
 import dotenv from "dotenv";
 import express from "express";
 import { selectUsuarios } from "./bd.js";
 
 dotenv.config();
 
-const app = express();
-const port = 3000;
+const app = express(); // Instancia o Express
+const port = 3000; // Define a porta
 
 app.get("/", (req, res) => {
-  console.log("Rota GET / solicitada");
+  console.log("Rota / solicitada");
   // Cria a rota da raiz do projeto
   res.json({
-    nome: "Antônio Marcos",
+    nome: "Antonio Marcos", // Substitua pelo seu nome
   });
 });
 
